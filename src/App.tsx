@@ -2,7 +2,7 @@ import "./App.css";
 
 function App() {
 	return (
-		<div>
+		<div className="">
 			<h1> Ahren Wagner Profile</h1>
 		</div>
 	);
