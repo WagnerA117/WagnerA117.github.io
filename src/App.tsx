@@ -4,7 +4,7 @@ function App() {
 	return (
 		<>
 			<div>
-				<p>Now to begin building!</p>
+				<p> I made a change </p>
 			</div>
 		</>
 	);
