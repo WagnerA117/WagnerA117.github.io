@@ -1,18 +1,14 @@
 import "./App.css";
 
-import resume from "./resume/resume.pdf";
+import {Home} from "./pages";
+import {ThemeProvider} from "./theme/ThemeProvider";
 
 function App() {
 	return (
 		<>
-			<div className="w-screen h-screen bg-blue-100">
-				<p> I made a change </p>
-				<a href={resume} download>
-					<button className="px-4 rounded-md hover:bg-white ">
-						Download Resume
-					</button>
-				</a>
-			</div>
+			<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+				<Home />
+			</ThemeProvider>
 		</>
 	);
 }
