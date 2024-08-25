@@ -10,8 +10,10 @@
 	],
 	"compilerOptions": {
 		"baseUrl": ".",
+		"module": "ESNext",
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"ui/*": ["./src/components/ui/*"]
 		}
 	}
 }
