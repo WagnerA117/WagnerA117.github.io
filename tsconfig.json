@@ -13,7 +13,8 @@
 		"module": "ESNext",
 		"paths": {
 			"@/*": ["./src/*"],
-			"ui/*": ["./src/components/ui/*"]
+			"ui/*": ["./src/components/ui/*"],
+			"typography/*": ["./src/components/typography/*"]
 		}
 	}
 }
