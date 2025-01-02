@@ -1,0 +1,21 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"main": "server.ts",
+	"license": "MIT",
+	"scripts": {
+		"test": "echo \" Error:  No Test specified \" && exit 1 ",
+		"start": "node server",
+		"dev": "nodemon server"
+	},
+	"dependencies": {
+		"express": "^4.21.2"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.0",
+		"@types/node": "^22.10.3",
+		"nodemon": "^3.1.9",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.2"
+	}
+}
