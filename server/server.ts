@@ -1,11 +1,44 @@
-import express from "express";
+import express, { Application, Request, Response } from "express";
+import cors from "cors";
 
-const app = express();
+import dotenv from "dotenv";
 
-app.get("/api", (req, res) => {
-	res.json({ test: ["testing"] });
+dotenv.config({
+	path: "../.env",
 });
 
-app.listen(8080, () => {
-	console.log("Server started on 8080");
+const app: Application = express();
+
+const port = process.env.PORT;
+
+const contactEmail = process.env.CONTACT_EMAIL;
+
+// Middleware to parse JSON bodies
+app.use(cors());
+app.use(express.json());
+
+//API Routes
+
+app.get("/api/test-message", (req: Request, res: Response): void => {
+	res.send("Backend contacted!");
+});
+
+app.post("/api/send-email", (req, res) => {
+	console.log("Received message:", req.body);
+
+	const message = req.body;
+
+	res.status(200);
+
+	res.json({
+		message,
+	});
+});
+
+// Start the server
+
+console.log(contactEmail);
+
+app.listen(port, () => {
+	console.log(`Server is running!`);
 });
